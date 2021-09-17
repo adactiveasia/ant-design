@@ -1,7 +1,6 @@
 import * as React from 'react';
 import classNames from 'classnames';
 import toArray from 'rc-util/lib/Children/toArray';
-import copy from 'copy-to-clipboard';
 import omit from 'rc-util/lib/omit';
 import EditOutlined from '@ant-design/icons/EditOutlined';
 import CheckOutlined from '@ant-design/icons/CheckOutlined';
@@ -231,7 +230,7 @@ class Base extends React.Component<InternalBlockProps, BaseState> {
     if (copyConfig.text === undefined) {
       copyConfig.text = String(children);
     }
-    copy(copyConfig.text || '');
+    // copy(copyConfig.text || '');
 
     this.setState({ copied: true }, () => {
       if (copyConfig.onCopy) {
